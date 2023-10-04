@@ -6,4 +6,16 @@
     <string name="Text_Sing_Password">Password</string>
     <string name="Button_SingIn">Вход</string>
     <string name="CheckBox_Registration">Зарегистрироваться</string>
+
+    <string name="Button_EditAndSaveProfile">Редактировать</string>
+    <string name="Button_Employees">Сотрудники</string>
+    <string name="Button_AssignedTasks">Поставленные задачи</string>
+    <string name="Button_CurrentTasks">Текущие задачи</string>
+    <string name="Button_CompletedTasks">Выполненные задачи</string>
+    <string name="Button_Exit">Выход</string>
+    <string name="ProfileSurname">Фамилия</string>
+    <string name="ProfileName">Имя</string>
+    <string name="ProfileOrganization">Организация</string>
+    <string name="ProfilePost">Должность</string>
+
 </resources>
