@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaskManagementSystem</string>
+
+    <string name="Text_SingIn">Вход в аккаунт</string>
+    <string name="Text_Sing_Login">Login</string>
+    <string name="Text_Sing_Password">Password</string>
+    <string name="Button_SingIn">Вход</string>
+    <string name="CheckBox_Registration">Зарегистрироваться</string>
+</resources>
