@@ -18,4 +18,9 @@
     <string name="ProfileOrganization">Организация</string>
     <string name="ProfilePost">Должность</string>
 
+    <string name="Button_Back">Назад</string>
+
+    <string name="Button_Create">Создать</string>
+    <string name="Button_NoCreate">Отмена</string>
+
 </resources>

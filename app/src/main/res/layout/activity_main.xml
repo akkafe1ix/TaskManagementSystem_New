@@ -60,6 +60,7 @@
         android:layout_marginTop="192dp"
         android:text="@string/Text_SingIn"
         android:textSize="70px"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

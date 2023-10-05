@@ -22,7 +22,7 @@ public class EmployeesActivity extends AppCompatActivity {
 
         List<Employees> employees = new ArrayList<Employees>();
         employees.add(new Employees(1,"Leonov","Nick","President"));
-        employees.add(new Employees(1,"Leonov","Nick","President"));
+        employees.add(new Employees(1,"Arefiev","Maksim","Zam"));
         employees.add(new Employees(1,"Leonov","Nick","President"));
         employees.add(new Employees(1,"Leonov","Nick","President"));
 
@@ -30,7 +30,7 @@ public class EmployeesActivity extends AppCompatActivity {
         gridView.setAdapter(new EmployeesAdapter(this, employees));
     }
 
-    public void ExitInEmployement(View view){
+    public void BackInAccount(View view){
         Intent intent = new Intent(this,PersonalAccountActivity.class);
         startActivity(intent);
     }
