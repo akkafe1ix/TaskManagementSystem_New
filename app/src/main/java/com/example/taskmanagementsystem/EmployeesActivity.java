@@ -22,11 +22,10 @@ public class EmployeesActivity extends AppCompatActivity {
 
         List<Employees> employees = new ArrayList<Employees>();
         employees.add(new Employees(1,"Leonov","Nick","President"));
-        employees.add(new Employees(1,"Arefiev","Maksim","Zam"));
-        employees.add(new Employees(1,"Leonov","Nick","President"));
-        employees.add(new Employees(1,"Leonov","Nick","President"));
+
 
         GridView gridView = (GridView) findViewById(id.gridView);
+        gridView.setAdapter(new EmployeesAdapter(this, employees));
         gridView.setAdapter(new EmployeesAdapter(this, employees));
     }
 

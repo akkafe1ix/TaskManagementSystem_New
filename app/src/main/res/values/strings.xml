@@ -22,5 +22,7 @@
 
     <string name="Button_Create">Создать</string>
     <string name="Button_NoCreate">Отмена</string>
+    <string name="SecondTask"></string>
+
 
 </resources>
