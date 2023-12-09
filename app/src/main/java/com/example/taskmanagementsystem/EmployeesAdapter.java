@@ -44,7 +44,7 @@ public class EmployeesAdapter extends BaseAdapter {
         Button button;
         if (convertView == null) {
             button = new Button(context);
-            button.setText(employees.get(position).getPost()+" "+employees.get(position).getSurname()+" "+employees.get(position).getName());
+            button.setText(employees.get(position).getPost()+" - "+employees.get(position).getSurname()+" "+employees.get(position).getName());
             
             //Создает обработчик событий
             button.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +56,7 @@ public class EmployeesAdapter extends BaseAdapter {
                             +" "+SplitString(2,(String)button.getText());
                     bundle.putString("fulname",fullname);
                     bundle.putString("post",SplitString(0,(String)button.getText()));
+                    bundle.putString("idEmployees",employees.get(position).getId());
                     Intent intent = new Intent(v.getContext(),CreateTasksActivity.class);
                     intent.putExtras(bundle);
                     context.startActivity(intent);

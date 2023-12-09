@@ -20,12 +20,18 @@ public class EmployeesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_employees);
 
+        SocketManager.sendParallel("Select acc_id, _secondname, _name, post from accounts where acc_id <> '"+MainActivity.idClient+"'");
+        SocketManager.receiveParallel();
+        String buf=SocketManager.getResult();
         List<Employees> employees = new ArrayList<Employees>();
-        employees.add(new Employees(1,"Leonov","Nick","President"));
+        String[] ClientStroka = buf.split("\n");
+        for (int i=0;i<ClientStroka.length;i++){
+            String ClientInfo[]=ClientStroka[i].split("\t");
+            employees.add(new Employees(ClientInfo[0],ClientInfo[1],ClientInfo[2],ClientInfo[3]));
+        }
 
 
         GridView gridView = (GridView) findViewById(id.gridView);
-        gridView.setAdapter(new EmployeesAdapter(this, employees));
         gridView.setAdapter(new EmployeesAdapter(this, employees));
     }
 

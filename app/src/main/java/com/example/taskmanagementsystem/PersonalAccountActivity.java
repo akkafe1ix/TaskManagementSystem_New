@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class PersonalAccountActivity extends AppCompatActivity {
@@ -28,25 +29,25 @@ public class PersonalAccountActivity extends AppCompatActivity {
     }
     public void StartEditProfile(View view){
 
-        TextView SurnameText = findViewById(R.id.editTextText3);
-        TextView NameText = findViewById(R.id.editTextText6);
-        TextView OrganizationText = findViewById(R.id.editTextText8);
-        TextView PostText = findViewById(R.id.editTextText9);
+        EditText SurnameText = (EditText) findViewById(R.id.editTextText3);
+        EditText NameText = (EditText) findViewById(R.id.editTextText6);
+        EditText OrganizationText = (EditText) findViewById(R.id.editTextText8);
+        EditText PostText = (EditText) findViewById(R.id.editTextText9);
         Button ButEditSave= findViewById(R.id.button2);
-        SurnameText.setEnabled(EditBool);
-        SurnameText.setFocusable(EditBool);
-        NameText.setEnabled(EditBool);
-        NameText.setFocusable(EditBool);
-        OrganizationText.setEnabled(EditBool);
-        OrganizationText.setFocusable(EditBool);
-        PostText.setEnabled(EditBool);
-        PostText.setFocusable(EditBool);
         if (EditBool==false){
             EditBool=true;
             ButEditSave.setText("Редактировать");
+            SurnameText.setEnabled(false);
+            NameText.setEnabled(false);
+            OrganizationText.setEnabled(false);
+            PostText.setEnabled(false);
         } else{
             EditBool=false;
             ButEditSave.setText("Сохранить");
+            SurnameText.setEnabled(true);
+            NameText.setEnabled(true);
+            OrganizationText.setEnabled(true);
+            PostText.setEnabled(true);
         }
     }
 

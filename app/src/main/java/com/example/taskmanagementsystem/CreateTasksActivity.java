@@ -22,6 +22,7 @@ public class CreateTasksActivity extends AppCompatActivity {
         Bundle bundle = this.getIntent().getExtras();
         FulName.setText(bundle.getString("fulname"));
         Post.setText(bundle.getString("post"));
+        String idEmployees=bundle.getString("idEmployees");
     }
 
     public void NoCreateTask(View view){
