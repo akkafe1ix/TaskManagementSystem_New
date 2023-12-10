@@ -52,8 +52,8 @@ public class EmployeesAdapter extends BaseAdapter {
                 public void onClick(View v) {
                     // Переход на другую активити с передачей данных
                     Bundle bundle = new Bundle();
-                    String fullname=SplitString(1,(String)button.getText())
-                            +" "+SplitString(2,(String)button.getText());
+                    String fullname=SplitString(2,(String)button.getText())
+                            +" "+SplitString(3,(String)button.getText());
                     bundle.putString("fulname",fullname);
                     bundle.putString("post",SplitString(0,(String)button.getText()));
                     bundle.putString("idEmployees",employees.get(position).getId());
