@@ -34,7 +34,7 @@ public class CreateTasksActivity extends AppCompatActivity {
     public void CreateTask(View view){
         EditText editText=findViewById(R.id.editTextText2);
         if(!editText.getText().toString().equals("Задача")){
-            SocketManager.sendParallel("INSERT INTO globaltask (taskname, lead_id, subject_id, check_complete) VALUES ('"+editText.getText().toString()+"', '"+MainActivity.idClient+"', '"+idEmployees+"','0');");
+            SocketManager.sendParallel("INSERT INTO globaltask (taskname, lead_id, subject_id, check_complete) VALUES ('"+editText.getText().toString()+"', '"+MainActivity.idClient+"', '"+idEmployees+"','0')");
         }
         SocketManager.sendParallel("Select gtask_id from globaltask where taskname = '"+editText.getText().toString()+"' and lead_id ='"+MainActivity.idClient+"' and subject_id='"+idEmployees+"'");
         SocketManager.receiveParallel();
@@ -42,67 +42,45 @@ public class CreateTasksActivity extends AppCompatActivity {
 
         editText=findViewById(R.id.editTextText17);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
         editText=findViewById(R.id.editTextText18);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
         editText=findViewById(R.id.editTextText19);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
         editText=findViewById(R.id.editTextText20);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
         editText=findViewById(R.id.editTextText21);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
         editText=findViewById(R.id.editTextText22);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
         editText=findViewById(R.id.editTextText23);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
         editText=findViewById(R.id.editTextText24);
         if(!editText.getText().toString().equals("Подзадача")){
-            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0');");
+            SocketManager.sendParallel("INSERT INTO secondtask (gtask_id, _text, check_complete) VALUES ('"+gtask+"', '"+editText.getText().toString()+"', '0')");
+            SocketManager.receiveParallel();
         }
-        Intent intent = new Intent(this,PersonalAccountActivity.class);
+        Intent intent = new Intent(this,EmployeesActivity.class);
         startActivity(intent);
-    }
-
-    public void AddSecondTask(View view){
-        EditText editText=findViewById(R.id.editTextText2);
-        if(!editText.getText().toString().equals("Задача")){
-        Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText17);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText18);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText19);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText20);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText21);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText22);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText23);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
-        editText=findViewById(R.id.editTextText24);
-        if(!editText.getText().toString().equals("Подзадача")){
-            Toast.makeText(this, editText.getText(), Toast.LENGTH_SHORT).show();}
     }
 }

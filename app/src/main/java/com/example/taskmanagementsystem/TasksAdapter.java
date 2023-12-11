@@ -54,7 +54,7 @@ public class TasksAdapter extends BaseAdapter{
                     Bundle bundle = new Bundle();
                     bundle.putString("idTasks",tasks.get(position).getId());
                     bundle.putString("Name",tasks.get(position).getName());
-                    Intent intent = new Intent(v.getContext(),AssignedTasksActivity.class);
+                    Intent intent = new Intent(v.getContext(),TaskViewerActivity.class);
                     intent.putExtras(bundle);
                     context.startActivity(intent);
                 }

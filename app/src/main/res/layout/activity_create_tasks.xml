@@ -124,18 +124,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="146dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="524dp"
-        android:onClick="AddSecondTask"
-        android:text="Добавить подзадачу"
-        android:textSize="25px"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ScrollView
         android:layout_width="366dp"
         android:layout_height="237dp"
