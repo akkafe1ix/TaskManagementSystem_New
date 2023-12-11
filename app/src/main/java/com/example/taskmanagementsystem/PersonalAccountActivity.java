@@ -65,4 +65,9 @@ public class PersonalAccountActivity extends AppCompatActivity {
         Intent intent = new Intent(this,EmployeesActivity.class);
         startActivity(intent);
     }
+
+    public void OpenCurrentActivity(View v){
+        Intent intent = new Intent(this,CurrentTaskActivity.class);
+        startActivity(intent);
+    }
 }

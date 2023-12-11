@@ -85,6 +85,7 @@
         android:layout_height="48dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="460dp"
+        android:onClick="OpenCurrentActivity"
         android:text="@string/Button_CurrentTasks"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

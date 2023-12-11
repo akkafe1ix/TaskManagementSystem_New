@@ -1,17 +1,15 @@
-package com.example.taskmanagementsystem;
-
-import static androidx.core.content.ContextCompat.startActivity;
+package com.example.taskmanagementsystem.AdapterAndClass;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.TextView;
+
+import com.example.taskmanagementsystem.AdapterAndClass.Employees;
+import com.example.taskmanagementsystem.CreateTasksActivity;
 
 import java.util.List;
 
@@ -52,12 +50,14 @@ public class EmployeesAdapter extends BaseAdapter {
                 public void onClick(View v) {
                     // Переход на другую активити с передачей данных
                     Bundle bundle = new Bundle();
-                    String fullname=SplitString(2,(String)button.getText())
-                            +" "+SplitString(3,(String)button.getText());
-                    bundle.putString("fulname",fullname);
-                    bundle.putString("post",SplitString(0,(String)button.getText()));
+                    //String fullname=SplitString(2,(String)button.getText())
+                    //        +" "+SplitString(3,(String)button.getText());
+                    String strochka=(String)button.getText();
+                    String Stroka[] = strochka.split("-");
+                    bundle.putString("fulname",Stroka[1]);
+                    bundle.putString("post",Stroka[0]);
                     bundle.putString("idEmployees",employees.get(position).getId());
-                    Intent intent = new Intent(v.getContext(),CreateTasksActivity.class);
+                    Intent intent = new Intent(v.getContext(), CreateTasksActivity.class);
                     intent.putExtras(bundle);
                     context.startActivity(intent);
                 }

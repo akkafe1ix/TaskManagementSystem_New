@@ -1,4 +1,4 @@
-package com.example.taskmanagementsystem;
+package com.example.taskmanagementsystem.AdapterAndClass;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+
+import com.example.taskmanagementsystem.AdapterAndClass.SecondTask;
 
 import java.util.List;
 

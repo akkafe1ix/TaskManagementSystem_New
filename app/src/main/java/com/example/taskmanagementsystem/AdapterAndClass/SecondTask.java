@@ -1,4 +1,4 @@
-package com.example.taskmanagementsystem;
+package com.example.taskmanagementsystem.AdapterAndClass;
 
 public class SecondTask {
     private String id_ST;

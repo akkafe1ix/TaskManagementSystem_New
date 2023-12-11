@@ -7,21 +7,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 
+import com.example.taskmanagementsystem.AdapterAndClass.CurrentTaskAdapter;
 import com.example.taskmanagementsystem.AdapterAndClass.SocketManager;
 import com.example.taskmanagementsystem.AdapterAndClass.Tasks;
-import com.example.taskmanagementsystem.AdapterAndClass.TasksAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssignedTasksActivity extends AppCompatActivity {
+public class CurrentTaskActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_assigned_tasks);
+        setContentView(R.layout.activity_current_task);
 
-        SocketManager.sendParallel("Select gtask_id, taskname from globaltask where lead_id = '"+MainActivity.idClient+"'");
+        SocketManager.sendParallel("Select gtask_id, taskname from globaltask where subject_id = '"+MainActivity.idClient+"'");
         SocketManager.receiveParallel();
         String buf=SocketManager.getResult();
         if (!buf.equals(" ")) {
@@ -33,9 +33,10 @@ public class AssignedTasksActivity extends AppCompatActivity {
             }
 
 
-            GridView gridView = (GridView) findViewById(R.id.gridView);
-            gridView.setAdapter(new TasksAdapter(this, tasks));
+            GridView gridView = (GridView) findViewById(R.id.gridCur);
+            gridView.setAdapter(new CurrentTaskAdapter(this, tasks));
         }
+
     }
 
     public void BackInAccount(View view){

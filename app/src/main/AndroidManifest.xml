@@ -15,8 +15,14 @@
         android:theme="@style/Theme.TaskManagementSystem"
         tools:targetApi="31">
         <activity
-            android:name=".TaskViewerActivity"
+            android:name=".CurrentTaskViewerActivity"
             android:exported="false"/>
+        <activity
+            android:name=".CurrentTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TaskViewerActivity"
+            android:exported="false" />
         <activity
             android:name=".AssignedTasksActivity"
             android:exported="false" />
@@ -34,6 +40,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

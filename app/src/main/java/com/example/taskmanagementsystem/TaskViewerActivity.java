@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.TextView;
 
+import com.example.taskmanagementsystem.AdapterAndClass.SecondTask;
+import com.example.taskmanagementsystem.AdapterAndClass.SecondTaskAdapter;
+import com.example.taskmanagementsystem.AdapterAndClass.SocketManager;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -2,22 +2,16 @@ package com.example.taskmanagementsystem;
 
 
 
-import static java.lang.Boolean.TRUE;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.taskmanagementsystem.AdapterAndClass.SocketManager;
 
 
 public class MainActivity extends AppCompatActivity {

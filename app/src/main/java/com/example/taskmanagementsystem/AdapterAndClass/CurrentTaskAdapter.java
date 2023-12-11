@@ -1,25 +1,23 @@
-package com.example.taskmanagementsystem;
-
-import static androidx.core.content.ContextCompat.startActivity;
+package com.example.taskmanagementsystem.AdapterAndClass;
 
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.TextView;
+
+import com.example.taskmanagementsystem.AdapterAndClass.Tasks;
+import com.example.taskmanagementsystem.CurrentTaskViewerActivity;
 
 import java.util.List;
 
-public class TasksAdapter extends BaseAdapter{
+public class CurrentTaskAdapter extends BaseAdapter {
     private Context context;
     private List<Tasks> tasks;
 
-    public TasksAdapter(Context context, List<Tasks> tasks) {
+    public CurrentTaskAdapter(Context context, List<Tasks> tasks) {
         this.context = context;
         this.tasks = tasks;
     }
@@ -54,7 +52,7 @@ public class TasksAdapter extends BaseAdapter{
                     Bundle bundle = new Bundle();
                     bundle.putString("idTasks",tasks.get(position).getId());
                     bundle.putString("Name",tasks.get(position).getName());
-                    Intent intent = new Intent(v.getContext(),TaskViewerActivity.class);
+                    Intent intent = new Intent(v.getContext(), CurrentTaskViewerActivity.class);
                     intent.putExtras(bundle);
                     context.startActivity(intent);
                 }
