@@ -21,7 +21,7 @@ public class CurrentTaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_current_task);
 
-        SocketManager.sendParallel("Select gtask_id, taskname from globaltask where subject_id = '"+MainActivity.idClient+"'");
+        SocketManager.sendParallel("Select gtask_id, taskname from globaltask where subject_id = '"+MainActivity.idClient+"' and check_complete='0'");
         SocketManager.receiveParallel();
         String buf=SocketManager.getResult();
         if (!buf.equals(" ")) {

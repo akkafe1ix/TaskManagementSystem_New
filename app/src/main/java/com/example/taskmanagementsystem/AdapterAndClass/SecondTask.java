@@ -23,5 +23,10 @@ public class SecondTask {
     public String getCheck() {
         return SCheck;
     }
+
+    public void setCheck(String check) {
+
+        SCheck=check;
+    }
 }
 

@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView responseTextView;
     private String host = "82.179.140.18";
-    private int port = 45683;
+    private int port = 45685;
     public static String idClient="";
     public static String name="";
     public static String surname="";
