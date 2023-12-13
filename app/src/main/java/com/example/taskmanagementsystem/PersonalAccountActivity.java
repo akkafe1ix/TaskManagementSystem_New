@@ -26,29 +26,9 @@ public class PersonalAccountActivity extends AppCompatActivity {
         TextView PostText = findViewById(R.id.editTextText9);
         PostText.setText(MainActivity.post);
 
-    }
-    public void StartEditProfile(View view){
 
-        EditText SurnameText = (EditText) findViewById(R.id.editTextText3);
-        EditText NameText = (EditText) findViewById(R.id.editTextText6);
-        EditText OrganizationText = (EditText) findViewById(R.id.editTextText8);
-        EditText PostText = (EditText) findViewById(R.id.editTextText9);
-        Button ButEditSave= findViewById(R.id.button2);
-        if (EditBool==false){
-            EditBool=true;
-            ButEditSave.setText("Редактировать");
-            SurnameText.setEnabled(false);
-            NameText.setEnabled(false);
-            OrganizationText.setEnabled(false);
-            PostText.setEnabled(false);
-        } else{
-            EditBool=false;
-            ButEditSave.setText("Сохранить");
-            SurnameText.setEnabled(true);
-            NameText.setEnabled(true);
-            OrganizationText.setEnabled(true);
-            PostText.setEnabled(true);
-        }
+
+
     }
 
     public void ExitInAccount(View v){

@@ -16,17 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="162dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="276dp"
-        android:onClick="StartEditProfile"
-        android:text="@string/Button_EditAndSaveProfile"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
         android:id="@+id/editTextText6"
         android:layout_width="126dp"
@@ -97,7 +86,7 @@
         android:layout_height="190dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="84dp"
-        android:src="@mipmap/ic_launcher_round"
+        android:src="@drawable/among_us"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/among_us" />
