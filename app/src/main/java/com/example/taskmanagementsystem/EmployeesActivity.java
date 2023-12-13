@@ -41,5 +41,6 @@ public class EmployeesActivity extends AppCompatActivity {
     public void BackInAccount(View view){
         Intent intent = new Intent(this,PersonalAccountActivity.class);
         startActivity(intent);
+        this.finish();
     }
 }

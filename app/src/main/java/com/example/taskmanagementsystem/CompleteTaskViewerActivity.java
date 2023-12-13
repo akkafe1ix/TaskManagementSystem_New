@@ -15,19 +15,19 @@ import com.example.taskmanagementsystem.AdapterAndClass.SocketManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TaskViewerActivity extends AppCompatActivity {
+public class CompleteTaskViewerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_task_viewer);
+        setContentView(R.layout.activity_complete_task_viewer);
 
         Bundle bundle = this.getIntent().getExtras();
         SocketManager.sendParallel("Select stask_id, _text, check_complete from secondtask where gtask_id = '"+bundle.getString("idTasks")+"' order by stask_id ASC");
         SocketManager.receiveParallel();
         String buf=SocketManager.getResult();
 
-        TextView textView=(TextView) findViewById(R.id.textView18);
+        TextView textView=(TextView) findViewById(R.id.textView27);
         SocketManager.sendParallel("Select subject_id from globaltask where gtask_id = '"+bundle.getString("idTasks")+"'");
         SocketManager.receiveParallel();
         String eployeesId=SocketManager.getResult();
@@ -53,11 +53,11 @@ public class TaskViewerActivity extends AppCompatActivity {
         Double procent=(CheckOne/All)*100;
 
         textView.setText(bundle.getString("Name"));
-        textView=(TextView) findViewById(R.id.textView13);
+        textView=(TextView) findViewById(R.id.textView25);
         textView.setText(emplInfo[1]+" "+emplInfo[0]);
-        textView=(TextView) findViewById(R.id.textView15);
+        textView=(TextView) findViewById(R.id.textView26);
         textView.setText(emplInfo[2]);
-        textView=(TextView) findViewById(R.id.textView19);
+        textView=(TextView) findViewById(R.id.textView191);
         String strprocent=String.valueOf(Math.round(procent));
         textView.setText(strprocent+"%");
 
@@ -69,12 +69,12 @@ public class TaskViewerActivity extends AppCompatActivity {
         }
 
 
-        GridView gridView = (GridView) findViewById(R.id.gridTask);
+        GridView gridView = (GridView) findViewById(R.id.gridTaskComplete);
         gridView.setAdapter(new SecondTaskAdapter(this, stask));
     }
 
     public void BackInAccount(View view){
-        Intent intent = new Intent(this,AssignedTasksActivity.class);
+        Intent intent = new Intent(this,CompleteTaskActivity.class);
         startActivity(intent);
         this.finish();
     }

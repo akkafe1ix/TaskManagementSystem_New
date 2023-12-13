@@ -71,5 +71,6 @@ public class CurrentTaskViewerActivity extends AppCompatActivity {
         }
         Intent intent = new Intent(this,CurrentTaskActivity.class);
         startActivity(intent);
+        this.finish();
     }
 }

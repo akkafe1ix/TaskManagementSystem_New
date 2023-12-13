@@ -15,8 +15,14 @@
         android:theme="@style/Theme.TaskManagementSystem"
         tools:targetApi="31">
         <activity
-            android:name=".CurrentTaskViewerActivity"
+            android:name=".CompleteTaskViewerActivity"
             android:exported="false"/>
+        <activity
+            android:name=".CompleteTaskActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CurrentTaskViewerActivity"
+            android:exported="false" />
         <activity
             android:name=".CurrentTaskActivity"
             android:exported="false" />

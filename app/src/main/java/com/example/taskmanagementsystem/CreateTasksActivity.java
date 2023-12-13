@@ -29,6 +29,7 @@ public class CreateTasksActivity extends AppCompatActivity {
     public void NoCreateTask(View view){
         Intent intent = new Intent(this,EmployeesActivity.class);
         startActivity(intent);
+        this.finish();
     }
 
     public void CreateTask(View view){

@@ -54,20 +54,30 @@ public class PersonalAccountActivity extends AppCompatActivity {
     public void ExitInAccount(View v){
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
+        this.finish();
     }
 
     public void OpenAssignedTasksActivity(View v){
         Intent intent = new Intent(this,AssignedTasksActivity.class);
         startActivity(intent);
+        this.finish();
     }
 
     public void OpenEmployeesActivity(View v){
         Intent intent = new Intent(this,EmployeesActivity.class);
         startActivity(intent);
+        this.finish();
     }
 
     public void OpenCurrentActivity(View v){
         Intent intent = new Intent(this,CurrentTaskActivity.class);
         startActivity(intent);
+        this.finish();
+    }
+
+    public void OpenCompleteTask(View v){
+        Intent intent = new Intent(this,CompleteTaskActivity.class);
+        startActivity(intent);
+        this.finish();
     }
 }
